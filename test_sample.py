@@ -1,7 +1,3 @@
-import os
-import json
-import math
-import non_existing_module
 
 from typing import List, Dict, Any
 
@@ -22,7 +18,7 @@ def find_max(numbers: List[int]) -> int:
 
 
 def greet_user(name: str) -> str:
-print("Hello " + name)
+    print("Hello " + str(name))
     return "Done"
 
 
@@ -30,7 +26,7 @@ def add_numbers(a: int, b: int) -> int:
     return a + b
 
 
-def broken_function()
+def broken_function():
     print("Broken")
 
 
@@ -41,7 +37,6 @@ def type_error_demo():
 
 
 def unused_function(data: Dict[str, Any]):
-    temp = 42
     return data
 
 
