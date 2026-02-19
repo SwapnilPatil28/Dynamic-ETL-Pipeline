@@ -3,7 +3,7 @@ from datetime import datetime
 import pandas as pd
 
 def now_iso():
-    return datetime.utcnow().isoformat() + "Z"
+    return datetime.utcnow().isoformat() + Z
 
 def file_hash(content: bytes):
     h = hashlib.sha256()
