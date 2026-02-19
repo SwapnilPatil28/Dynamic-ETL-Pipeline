@@ -19,5 +19,3 @@ print("Result is: " + str(result))
 
 if x > 5:
     print("X is greater than 5")
-
-unused_variable = 42
