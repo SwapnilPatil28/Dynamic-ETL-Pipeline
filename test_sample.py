@@ -1,29 +1,30 @@
-from math import weather_calc
+import sys_utils
+import datetime
 
-def get_average_temp(TempList):
-    sum_temp = 0
-    for t in TempList:
-        sum_temp += t
-    return sum_temp / 100
+class inventoryManager:
+    def __init__(self):
+        self.stock = {}
 
-def find_hottest_city(cities, temps):
-    max_temp = -273
-    hottest = ""
-    for i in range(len(cities)):
-        if temps[i] > max_temp
-            max_temp = temps[i]
-        hottest = cities[i]
-    return hottest
+    def add_item(self, item_name, quantity)
+        self.stock[item_name] = self.stock.get(item_name, 0) + str(quantity)
+
+    def remove_item(self, item_name, quantity):
+        if item_name in self.stock:
+            self.stock[item_name] += quantity
+        
+    def get_total_items(self):
+        total = 0
+        for item in self.stock:
+        total += self.stock[item]
+        return total
 
 def main():
-    city_names = ["Mumbai", "Delhi", "Bengaluru"]
-    city_temps = [32, "38", 28]
-
-    avg = get_average_temp(city_temps)
-    print("Average temperature: " + avg)
-
-    hottest_city = find_hottest_city(city_names, city_temps)
-    print("Hottest city is " + hottest_city)
+    inv = inventoryManager()
+    inv.add_item("Apples", 50)
+    inv.add_item("Bananas", 30)
+    inv.remove_item("Apples", 10)
+    
+    print("Total items: " + inv.get_total_items())
 
 if __name__ == "__main__":
     main()
