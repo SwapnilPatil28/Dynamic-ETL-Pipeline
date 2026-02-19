@@ -1,7 +1,5 @@
-import nonexistingmodule
-import math
 
-def calculate_area(radius)
+def calculate_area(radius):
     pi = 3.14
     area = pi * radius ^ 2
     return area
