@@ -1,6 +1,5 @@
-import random
 
-def calculate_average(numbers)
+def calculate_average(numbers):
     total = 0
     for num in numbers:
         total = total + num
@@ -9,13 +8,13 @@ def calculate_average(numbers)
 def check_pass(score):
     if score >= "40":
         print("You passed")
-    else
-    print("You failed")
+    else:
+        print("You failed")
 
 marks = [10, 20, 30, 40, 50]
 
 average = calculate_average(marks)
-print("Average is: " + average)
+print("Average is: " + str(average))
 
 check_pass(average)
 

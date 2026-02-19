@@ -14,9 +14,7 @@ Each schema entry looks like:
 }
 """
 
-from pymongo import MongoClient
 from datetime import datetime
-from config import MONGO_URI, MONGO_DB, MONGO_SCHEMA_REG
 from deepdiff import DeepDiff
 
 
