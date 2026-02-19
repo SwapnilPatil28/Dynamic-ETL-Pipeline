@@ -63,7 +63,7 @@ def record_new_schema(schema: dict, diff=None):
     coll = client[MONGO_DB][MONGO_SCHEMA_REG]
 
     doc = {
-        "version_ts": datetime.utcnow().isoformat() + "Z",
+        "version_ts": datetime.utcnow().isoformat() + Z,
         "schema": schema,
         "diff_from_prev": diff
     }
