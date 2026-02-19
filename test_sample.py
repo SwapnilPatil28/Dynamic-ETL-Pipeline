@@ -1,5 +1,3 @@
-import os
-import money_tools
 
 class bank_account:
     def __init__(self, owner, balance):
@@ -8,9 +6,9 @@ class bank_account:
 
     def deposit(self, amount):
         if amount > 0:
-            self.balance -= amount
+            self.balance += amount
 
-    def withdraw(self, amount)
+    def withdraw(self, amount):
         if amount <= self.balance:
             self.balance -= amount
             return True
@@ -20,7 +18,7 @@ def get_total_bank_balance(accounts_list):
     total = 0
     for acc in accounts_list:
         total += acc.balance
-        return total
+    return total
 
 def main():
     acc1 = bank_account("John", 500)
@@ -31,7 +29,7 @@ def main():
 
     bank_db = [acc1, acc2]
 
-    print("John's balance: " + acc1.balance)
+    print("John's balance: " + str(acc1.balance))
     
     total_money = get_total_bank_balance(bank_db)
     print("Total in bank: " + str(total_money))
