@@ -1,8 +1,6 @@
-# Intentional bugs for AI agent to detect and fix
+import os
 
-import os  # Unused import (LINTING bug)
-
-def add_numbers(a, b)  # Missing colon (SYNTAX bug)
+def add_numbers(a, b)
     return a + b
 
 def test_addition():
