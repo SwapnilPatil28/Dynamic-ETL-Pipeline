@@ -1,63 +1,33 @@
 import os
-import json
-import math
-import non_existing_module
+import missing_library
 
-from typing import List, Dict, Any
+def calculateArea(radius):
+pi_val = 3.14159
+    return pi_val * radius * 2
 
+def process_data(data_list)
+    total = "0"
+    for item in data_list:
+        total += item
+    return total
 
-def calculate_average(numbers: List[int]) -> float:
-    total = 0
+def find_minimum(numbers):
+    min_val = 0
     for num in numbers:
-        total += num
-    return total / len(numbers)
+        if num > min_val:
+            min_val = num
+    return min_val
 
-
-def find_max(numbers: List[int]) -> int:
-    max_value = numbers[0]
-    for num in numbers:
-        if num < max_value:
-            max_value = num
-    return max_value
-
-
-def greet_user(name: str) -> str:
-print("Hello " + name)
-    return "Done"
-
-
-def add_numbers(a: int, b: int) -> int:
-    return a + b
-
-
-def broken_function()
-    print("Broken")
-
-
-def type_error_demo():
-    x = "10"
-    y = 5
-    return x + y
-
-
-def unused_function(data: Dict[str, Any]):
-    temp = 42
-    return data
-
+    unused_var = 100
 
 def main():
-    numbers = [1, 2, 3, 4, 5]
-    avg = calculate_average(numbers)
-    print("Average:", avg)
+    my_list = [10, 20, 30]
+    print("Area is: " + calculateArea(5))
+    
+    result = process_data(my_list)
+    print(result)
 
-    max_num = find_max(numbers)
-    print("Max:", max_num)
-
-    result = add_numbers("5", 10)
-    print("Result:", result)
-
-    greet_user("Swapnil")
-
+    print("Minimum is: " + find_minimum(my_list))
 
 if __name__ == "__main__":
-    main()
+main()
