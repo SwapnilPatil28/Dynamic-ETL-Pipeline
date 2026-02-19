@@ -1,7 +1,3 @@
-import os
-import json
-import math
-import non_existing_module
 
 from typing import List, Dict, Any
 
@@ -16,13 +12,13 @@ def calculate_average(numbers: List[int]) -> float:
 def find_max(numbers: List[int]) -> int:
     max_value = numbers[0]
     for num in numbers:
-        if num < max_value:
+        if num > max_value:
             max_value = num
     return max_value
 
 
 def greet_user(name: str) -> str:
-print("Hello " + name)
+    print("Hello " + str(name))
     return "Done"
 
 
@@ -30,18 +26,17 @@ def add_numbers(a: int, b: int) -> int:
     return a + b
 
 
-def broken_function()
+def broken_function():
     print("Broken")
 
 
 def type_error_demo():
     x = "10"
     y = 5
-    return x + y
+    return x + str(y)
 
 
 def unused_function(data: Dict[str, Any]):
-    temp = 42
     return data
 
 
@@ -53,7 +48,7 @@ def main():
     max_num = find_max(numbers)
     print("Max:", max_num)
 
-    result = add_numbers("5", 10)
+    result = add_numbers(5, 10)
     print("Result:", result)
 
     greet_user("Swapnil")
