@@ -1,4 +1,3 @@
-from math import weather_calc
 
 def get_average_temp(TempList):
     sum_temp = 0
@@ -10,7 +9,7 @@ def find_hottest_city(cities, temps):
     max_temp = -273
     hottest = ""
     for i in range(len(cities)):
-        if temps[i] > max_temp
+        if temps[i] > max_temp:
             max_temp = temps[i]
         hottest = cities[i]
     return hottest
