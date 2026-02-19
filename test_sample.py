@@ -1,5 +1,3 @@
-import os
-import money_tools
 
 class bank_account:
     def __init__(self, owner, balance):
@@ -10,7 +8,7 @@ class bank_account:
         if amount > 0:
             self.balance -= amount
 
-    def withdraw(self, amount)
+    def withdraw(self, amount):
         if amount <= self.balance:
             self.balance -= amount
             return True
