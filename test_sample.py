@@ -1,11 +1,10 @@
-import randm
 
 class student_record:
     def __init__(self, name):
         self.Name = name
         self.grades = []
 
-    def addGrade(self, grade)
+    def addGrade(self, grade):
         self.grades.append(str(grade))
 
     def get_average(self):
@@ -18,7 +17,7 @@ def get_top_student(students):
     top_student = None
     highest_avg = 100
     for student in students:
-    if student.get_average() > highest_avg:
+        if student.get_average() > highest_avg:
         highest_avg = student.get_average()
         top_student = student
     return top_student
