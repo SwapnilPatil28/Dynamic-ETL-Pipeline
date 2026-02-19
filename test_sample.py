@@ -17,5 +17,3 @@ average = calculate_average(marks)
 print("Average is: " + str(average))
 
 check_pass(average)
-
-unused_var = 100
