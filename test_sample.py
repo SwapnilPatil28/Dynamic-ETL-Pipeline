@@ -4,12 +4,8 @@ Simple test to verify multi-import removal fix.
 Run this to see the fix in action.
 """
 
-import sys
-from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent / "backend"))
 
-from app.services.patch_applier import PatchApplierService
-from app.services.static_analyzer import StaticAnalyzerService
 
 
 def main():
@@ -19,8 +15,6 @@ def main():
     
     # Test case: Multi-part import where only some are used
     test_code = """from typing import Any, Dict, List
-import os
-import json
 
 def get_data() -> Dict:
     return json.loads('{"key": "value"}')
@@ -65,11 +59,7 @@ def get_data() -> Dict:
     applier = PatchApplierService()
     for f in fixes:
         result = applier.apply_fix(
-            repo_path=test_dir,
-            file_path=f["file"],
             line_number=f["line_number"],
-            bug_type=f["bug_type"],
-            message=f["message"]
         )
         status = "✓" if result else "✗"
         print(f"  {status} Line {f['line_number']}: {'Fixed' if result else 'Failed'}")
@@ -105,7 +95,6 @@ def get_data() -> Dict:
     print("=" * 70)
     
     # Cleanup
-    import shutil
     shutil.rmtree(test_dir)
     
     return all_good
