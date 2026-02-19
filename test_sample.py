@@ -1,11 +1,9 @@
-import sys_utils
-import datetime
 
 class inventoryManager:
     def __init__(self):
         self.stock = {}
 
-    def add_item(self, item_name, quantity)
+    def add_item(self, item_name, quantity):
         self.stock[item_name] = self.stock.get(item_name, 0) + str(quantity)
 
     def remove_item(self, item_name, quantity):
@@ -15,7 +13,7 @@ class inventoryManager:
     def get_total_items(self):
         total = 0
         for item in self.stock:
-        total += self.stock[item]
+            total += self.stock[item]
         return total
 
 def main():
