@@ -1,24 +1,22 @@
-import nonexistingmodule
-import math
+import random
 
-def calculate_area(radius)
-    pi = 3.14
-    area = pi * radius ^ 2
-    return area
+def calculate_average(numbers)
+    total = 0
+    for num in numbers:
+        total = total + num
+    return total / len(number)
 
-def greet(name):
-print("Hello " + name)
+def check_pass(score):
+    if score >= "40":
+        print("You passed")
+    else
+    print("You failed")
 
-def add_numbers(a, b):
-    return a + "b"
+marks = [10, 20, 30, 40, 50]
 
-x = 10
-y = "20"
+average = calculate_average(marks)
+print("Average is: " + average)
 
-result = add_numbers(x, y)
-print("Result is: " + result)
+check_pass(average)
 
-if x > 5
-    print("X is greater than 5")
-
-unused_variable = 42
+unused_var = 100
