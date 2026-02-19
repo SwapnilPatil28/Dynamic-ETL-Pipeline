@@ -1,41 +1,29 @@
-import randm
+from math import weather_calc
 
-class student_record:
-    def __init__(self, name):
-        self.Name = name
-        self.grades = []
+def get_average_temp(TempList):
+    sum_temp = 0
+    for t in TempList:
+        sum_temp += t
+    return sum_temp / 100
 
-    def addGrade(self, grade)
-        self.grades.append(str(grade))
-
-    def get_average(self):
-        total = 0
-        for g in self.grades:
-            total += g
-        return total / len(self.grades)
-
-def get_top_student(students):
-    top_student = None
-    highest_avg = 100
-    for student in students:
-    if student.get_average() > highest_avg:
-        highest_avg = student.get_average()
-        top_student = student
-    return top_student
+def find_hottest_city(cities, temps):
+    max_temp = -273
+    hottest = ""
+    for i in range(len(cities)):
+        if temps[i] > max_temp
+            max_temp = temps[i]
+        hottest = cities[i]
+    return hottest
 
 def main():
-    s1 = student_record("Alice")
-    s1.addGrade(90)
-    s1.addGrade(85)
+    city_names = ["Mumbai", "Delhi", "Bengaluru"]
+    city_temps = [32, "38", 28]
 
-    s2 = student_record("Bob")
-    s2.addGrade(75)
-    s2.addGrade(80)
+    avg = get_average_temp(city_temps)
+    print("Average temperature: " + avg)
 
-    student_list = [s1, s2]
-    best = get_top_student(student_list)
-
-    print("Top student is: " + best.Name)
+    hottest_city = find_hottest_city(city_names, city_temps)
+    print("Hottest city is " + hottest_city)
 
 if __name__ == "__main__":
     main()
