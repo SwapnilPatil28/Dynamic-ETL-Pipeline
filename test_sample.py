@@ -1,30 +1,40 @@
-import sys_utils
-import datetime
+import os
+import money_tools
 
-class inventoryManager:
-    def __init__(self):
-        self.stock = {}
+class bank_account:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
 
-    def add_item(self, item_name, quantity)
-        self.stock[item_name] = self.stock.get(item_name, 0) + str(quantity)
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance -= amount
 
-    def remove_item(self, item_name, quantity):
-        if item_name in self.stock:
-            self.stock[item_name] += quantity
-        
-    def get_total_items(self):
-        total = 0
-        for item in self.stock:
-        total += self.stock[item]
+    def withdraw(self, amount)
+        if amount <= self.balance:
+            self.balance -= amount
+            return True
+        return False
+
+def get_total_bank_balance(accounts_list):
+    total = 0
+    for acc in accounts_list:
+        total += acc.balance
         return total
 
 def main():
-    inv = inventoryManager()
-    inv.add_item("Apples", 50)
-    inv.add_item("Bananas", 30)
-    inv.remove_item("Apples", 10)
+    acc1 = bank_account("John", 500)
+    acc1.deposit(200)
+
+    acc2 = bank_account("Jane", 1000)
+    acc2.withdraw(300)
+
+    bank_db = [acc1, acc2]
+
+    print("John's balance: " + acc1.balance)
     
-    print("Total items: " + inv.get_total_items())
+    total_money = get_total_bank_balance(bank_db)
+    print("Total in bank: " + str(total_money))
 
 if __name__ == "__main__":
     main()
